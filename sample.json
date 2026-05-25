@@ -1,0 +1,29 @@
+{
+  "order": {
+    "id": "TSLA-ORD-2025-78432",
+    "customer": {
+      "name": "Surya NM",
+      "email": "surya@test.com"
+    },
+    "vehicle": {
+      "model": "Model S",
+      "variant": "Plaid",
+      "year": 2025,
+      "specs": {
+        "range_miles": 396,
+        "horsepower": 1020
+      },
+      "options": [
+        {
+          "name": "Full Self-Driving",
+          "price": 12000
+        },
+        {
+          "name": "Premium Package",
+          "price": 4500
+        }
+      ]
+    },
+    "total": 113034
+  }
+}
