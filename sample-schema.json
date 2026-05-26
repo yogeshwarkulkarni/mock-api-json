@@ -1,14 +1,81 @@
 {
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "required": ["order"],
   "properties": {
     "order": {
       "type": "object",
-      "required": ["id", "status", "amount"],
+      "required": ["id", "customer", "vehicle", "total"],
       "properties": {
-        "id": { "type": "string" },
-        "status": { "type": "string" },
-        "amount": { "type": "number" }
+
+        "id": {
+          "type": "string"
+        },
+
+        "customer": {
+          "type": "object",
+          "required": ["name", "email"],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            }
+          }
+        },
+
+        "vehicle": {
+          "type": "object",
+          "required": ["model", "variant", "year", "specs", "options"],
+          "properties": {
+
+            "model": {
+              "type": "string"
+            },
+
+            "variant": {
+              "type": "string"
+            },
+
+            "year": {
+              "type": "integer"
+            },
+
+            "specs": {
+              "type": "object",
+              "required": ["range_miles", "horsepower"],
+              "properties": {
+                "range_miles": {
+                  "type": "integer"
+                },
+                "horsepower": {
+                  "type": "integer"
+                }
+              }
+            },
+
+            "options": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["name", "price"],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "price": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        },
+
+        "total": {
+          "type": "integer"
+        }
       }
     }
   }
