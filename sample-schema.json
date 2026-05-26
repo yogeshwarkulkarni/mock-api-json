@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "required": ["order"],
+  "properties": {
+    "order": {
+      "type": "object",
+      "required": ["id", "status", "amount"],
+      "properties": {
+        "id": { "type": "string" },
+        "status": { "type": "string" },
+        "amount": { "type": "number" }
+      }
+    }
+  }
+}
